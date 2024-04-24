@@ -1,6 +1,3 @@
-Iustitiacoin Core integration/staging tree
-=====================================
-
 What is Iustitiacoin?
 ----------------
 
