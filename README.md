@@ -81,7 +81,7 @@ sudo make
 sudo make install
 ```
 ##### Run The Blockchain
-After Installing And Compiling Run The Following Commands As Root
+After Installing And Compiling Run The Following Command As Root
 ```
 iustitiacoind -rpcuser=USER -rpcpassword=PASSWORD -datadir=/root/.iustitiacoin -conf=iustitiacoin.conf -daemon -txindex -shrinkdebugfile
 ```
