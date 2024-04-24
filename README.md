@@ -76,7 +76,8 @@ sudo make install
 git clone https://github.com/Iustitia-Coin/IustitiaCoinRepo.git
 sudo chmod -R 777 COINFOLDER && cd COINFOLDER 
 sudo chmod +x autogen.sh 
-./autogen.sh && ./configure CPPFLAGS="-I${BDB_PREFIX}/include/ -O2" LDFLAGS="-L${BDB_PREFIX}/lib/" 
+./autogen.sh 
+./configure
 sudo make 
 sudo make install
 ```
