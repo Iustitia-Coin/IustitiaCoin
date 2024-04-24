@@ -55,3 +55,30 @@ Changes should be tested by somebody other than the developer who wrote the
 code. This is especially important for large or high-risk changes. It is useful
 to add a test plan to the pull request description if testing the changes is
 not straightforward.
+
+----------------------------------------------
+![Homepage](src/logo.png)
+
+### Installation
+Requires Ubuntu 18.04
+
+Preparing The Env
+
+```
+sudo apt-get update -y 
+sudo apt-get install build-essential -y
+sudo apt-get install autoconf libtool pkg-config libboost-all-dev libssl-dev libprotobuf-dev protobuf-compiler libevent-dev libqt4-dev libcanberra-gtk-module libdb++-dev -y 
+wget http://download.oracle.com/berkeley-db/db-4.8.30.NC.tar.gz && tar -xvf db-4.8.30.NC.tar.gz && cd db-4.8.30.NC/build_unix && mkdir -p build && BDB_PREFIX=$(pwd)/build && ../dist/configure --disable-shared --enable-cxx --with-pic --prefix=$BDB_PREFIX 
+sudo make install
+
+```
+
+#### Compile The Code
+
+```
+sudo chmod -R 777 COINFOLDER && cd COINFOLDER 
+sudo chmod +x autogen.sh 
+./autogen.sh && ./configure CPPFLAGS="-I${BDB_PREFIX}/include/ -O2" LDFLAGS="-L${BDB_PREFIX}/lib/" 
+sudo make 
+sudo make install
+```
